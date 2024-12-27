@@ -1,0 +1,16 @@
+.background-panel {
+    position: fixed; /* ou absolute, dependendo do seu layout */
+    width: 70%; /* Ajuste conforme necessário para o layout */
+    height: 1300px; /* Ajuste a altura conforme necessário */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.233) 0%, rgba(255, 255, 255, 0.2) 100%), url('/path/to/your/background-image.jpg');
+    background-size: cover; /* Para cobrir todo o espaço disponível */
+    box-shadow: 18px 0 18px rgba(253, 253, 253, 0.1), 
+                -18px 0 18px rgba(253, 253, 253, 0.1),
+                0 18px 18px rgba(253, 253, 253, 0.1),
+                0 -18px 18px rgba(253, 253, 253, 0.1);
+    border-radius: 15px; /* Borda arredondada */
+    padding: 20px; /* Adicionando espaçamento interno */
+    top: 95px; /* Ajuste a distância do topo */
+    left: calc(107% - 80% - 20px); /* Ajuste a distância da lateral direita */
+    transform: translateY(0); /* Ajuste a posição vertical se necessário */
+}

@@ -1,0 +1,139 @@
+// Importando variáveis definidas no arquivo 'variables.scss' para usar no arquivo atual
+@import '../../assets/styles/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+.sidebar-logo {
+  width: 21em;  /* Tamanho da logo */
+  height: auto;  /* Mantém a proporção da imagem */
+  padding: 20px;
+  left: 2.5em;
+  position: relative;
+  margin-bottom: 20px;  /* Espaçamento abaixo da logo */
+
+
+}
+
+// Estilo principal para a sidebar
+.sidebar {
+  font-family: 'Montserrat', sans-serif; /* Adicionando Montserrat como fonte para a sidebar */
+  width: 350px; /* Define a largura da sidebar */
+  background-color: $gray-night; /* Cor de fundo definida pela variável $gray-night */
+  color: $text-color; /* Cor do texto definida pela variável $text-color */
+  height: 150vh; /* Define a altura da sidebar para ocupar toda a altura da tela */
+  display: flex; /* Utiliza flexbox para posicionamento dos elementos dentro da sidebar */
+  flex-direction: column; /* Organiza os itens dentro da sidebar na direção vertical */
+  position: fixed; /* Fixando a sidebar na tela, para que não role com a página */
+  top: 0; /* Posiciona a sidebar no topo da tela */
+  left: 0; /* Posiciona a sidebar à esquerda da tela */
+  margin-top: 6em;
+  margin-left: 5em;
+  padding: 10px 20px; /* Adiciona 30px de espaçamento interno em todos os lados da sidebar */
+  
+   // Fundo com gradiente e sombra
+   width: 18%;
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0.233) 0%, rgba(255, 255, 255, 0.2) 100%), url('/path/to/your/background-image.jpg');
+   background-size: cover; // Para cobrir todo o espaço disponível
+   box-shadow: 18px 0 18px rgba(253, 253, 253, 0.1), 
+              -18px 0 18px rgba(253, 253, 253, 0.1),
+              0 18px 18px rgba(253, 253, 253, 0.1),
+              0 -18px 18px rgba(253, 253, 253, 0.1);
+   
+    // Borda arredondada
+  border-radius: 15px; // Ajuste o valor conforme necessário
+   
+
+
+  // Novo contêiner para centralizar o menu verticalmente
+  .menu-container {
+    flex: 1; /* Faz com que o contêiner ocupe o espaço restante na sidebar */
+    display: flex; /* Utiliza flexbox para o alinhamento dos itens */
+    flex-direction: column; /* Organiza os itens do menu verticalmente */
+    justify-content: center; /* Centraliza verticalmente os itens dentro do contêiner */
+  }
+
+  // Estilos para a lista não ordenada dentro da sidebar
+  ul {
+    position: relative;
+    bottom: 3em;
+    right: 0;
+    list-style: none; /* Remove os marcadores (bolinhas) da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+
+    // Estilo para os itens de lista
+    li {
+      position: relative; // Para facilitar o posicionamento do pseudo-elemento
+      padding-top: 0.1em;
+      margin: 2px 0;
+      align-items: center;
+
+      // Adiciona um risco acima do Dashboard
+      &:first-child::before {
+        content: "";
+        display: block;
+        height: 2px; /* Altura do risco */
+        width: 80%; /* Largura total do risco */
+        background-color: rgba(97, 207, 204, 0.3); /* Cor do risco */
+        margin: 0 auto 10px; /* Centraliza e espaça abaixo do risco */
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 2px; /* Altura do risco igual aos de baixo */
+        width: 80%; /* Largura total do risco */
+        position: relative;
+        left: 3em;
+        background-color: rgba(97, 207, 204, 0.3);
+        margin: 0.5em 0;
+        transition: background-color 0.3s ease, height 0.3s ease, opacity 0.3s ease; // Transições
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); // Sombra
+        opacity: 0.7; // Opacidade inicial
+      }
+
+      &:hover::after {
+        height: 3px; // Crescimento da linha
+        background-color: rgba(97, 207, 204, 0.8); // Cor mais intensa
+        opacity: 1; // Aumenta a opacidade
+        animation: pulse 0.5s infinite; // Animação ao passar o mouse
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(1.1);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  // Estilo para os links dentro dos itens de lista
+  a {
+    display: block; /* Mude para block para ocupar toda a largura */
+  width: 80%; /* Garante que o link ocupe 100% da largura do contêiner */
+  color: $text-color; 
+  text-decoration: none; 
+  padding: 10px; 
+  border-radius: 5px; 
+  position: relative; 
+  left: 2em;
+  letter-spacing: 1.1px; 
+  transition: background-color 0.3s ease; 
+    // Estilo para o estado de hover do link (quando o usuário passa o mouse sobre o link)
+    &:hover {
+      width: 80%;
+      background-color: $primary-color; /* Muda a cor de fundo para a cor primária quando o mouse passa sobre o link */
+    }
+
+    // Estilo para os ícones dentro dos links
+    svg {
+        padding-left: 2em;
+      margin-right: 25px; /* Adiciona 15px de espaçamento à direita do ícone */
+    }
+  }
+}

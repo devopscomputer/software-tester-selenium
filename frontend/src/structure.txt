@@ -1,0 +1,27 @@
+src/
+├── assets/
+│   ├── styles/
+│   │   ├── global.scss
+│   │   ├── variables.scss
+│   │   ├── sidebar.scss
+│   │   ├── navbar.scss
+│   │   ├── footer.scss
+│   │   ├── dashboard.scss
+│   │   ├── notifications.scss
+├── components/
+│   ├── common/
+│   │   ├── Sidebar.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   ├── Dashboard/
+│   │   ├── Dashboard.jsx
+│   │   ├── SummaryCards.jsx
+│   │   ├── RecentLogs.jsx
+│   │   ├── TestTrendsChart.jsx
+│   │   ├── TestExecutionTable.jsx
+│   ├── Notifications/
+│   │   ├── Notifications.jsx
+│   │   ├── NotificationList.jsx
+│   │   ├── NotificationItem.jsx
+├── App.jsx
+├── index.jsx

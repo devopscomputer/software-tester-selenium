@@ -1,0 +1,92 @@
+.logo1 {
+    top: 5em;
+    position: relative;
+    width: 350px; /* Aumente o tamanho conforme necessário */
+    margin-bottom: 20px; /* Espaço abaixo do logo */
+}
+
+
+
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Preenche toda a altura da tela */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.233) 0%, rgba(255, 255, 255, 0.2) 100%), url('/path/to/your/background-image.jpg');
+    background-size: cover;
+}
+
+.login-card {
+    position: fixed; /* ou absolute, dependendo do seu layout */
+    width: 22%; /* Ajuste conforme necessário */
+    height: 900px; /* Ajuste a altura conforme necessário */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.233) 0%, rgba(255, 255, 255, 0.2) 100%);
+    box-shadow: 18px 0 18px rgba(253, 253, 253, 0.1),
+                -18px 0 18px rgba(253, 253, 253, 0.1),
+                0 18px 18px rgba(253, 253, 253, 0.1),
+                0 -18px 18px rgba(253, 253, 253, 0.1);
+    border-radius: 15px; /* Borda arredondada */
+    padding: 20px; /* Adicionando espaçamento interno */
+    top: 195px; /* Ajuste a distância do topo */
+    left: calc(76% - 35%); /* Centraliza o card na tela */
+    transform: translateY(0); /* Ajuste a posição vertical se necessário */
+    text-align: center; /* Centraliza o texto */
+    
+    h2 {
+        margin-bottom: 40px; /* Espaço abaixo do título */
+    }
+    
+    .input-group {
+        top: 4em;
+        position: relative;
+        margin-bottom: 35px; /* Espaço entre os campos */
+        
+        label {
+            opacity: 0.6;
+            font-size: 1.3em;
+            font-family: 'Montserrat', sans-serif; /* Adicionando Montserrat como fonte para a sidebar */
+            display: flex; /* Faz o label ocupar a linha inteira */
+            position: relative;
+            left: 2.6em;
+            margin-bottom: 3px; /* Espaço abaixo do label */
+        }
+        
+        input {
+            width: 80%; /* Faz o input ocupar toda a largura */
+            padding: 10px; /* Espaçamento interno */
+            border: 1px solid #cccccc6e; /* Borda do input */
+            border-radius: 5px; /* Borda arredondada */
+        }
+    }
+    
+    .forgot-password {
+        display: block; /* Faz o link ocupar a linha inteira */
+        margin: 10px 0; /* Espaço acima e abaixo do link */
+        color: #05cfc871; /* Cor do link */
+        text-decoration: none; /* Remove o sublinhado */
+        
+        &:hover {
+            text-decoration: underline; /* Sublinha ao passar o mouse */
+        }
+    }
+    
+    button {
+        top: 4em;
+        position: relative;
+        z-index: 2;
+        width: 480px;
+        height: 50px;
+        position: relative;
+        padding: 10px;
+        background-color: #69ddfaab;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+            background-color: #69ddfa; /* Cor ao passar o mouse */
+        }
+    }
+}
